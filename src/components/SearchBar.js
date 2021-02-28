@@ -2,31 +2,8 @@ import React, { useState} from 'react'
 import ClassSimple from './ClassSimple';
 
 export default function SearchBar(props) {
-  const [search, setSearch] = useState('')
-  // eslint-disable-next-line
-  const [classes, setClasses] = useState(props.classes || [])
+  const { search, setSearch, classes } = props
   const [dropDown, setDropDown] = useState('name')
-  props.setUseSearch(search) 
-  // useEffect(
-  //   (evt) => {
-  //     axios
-  //       .get('https://anywhere-fitness-tt42.herokuapp.com/api/classes', {
-  //         headers: {
-  //           authorization:
-  //             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RVc2VyIiwiaWF0IjoxNjEyMzc0MTMxLCJleHAiOjE2MTU5NzQxMzF9.QVLlWbhsCBgaU-Ba2TgW-T9McPNTsWpdodhI2OwiPIc',
-  //         },
-  //       })
-  //       .then((res) => {
-  //         setClasses(res.data)
-  //       })
-  //       .catch((err) => {
-  //         console.error(err)
-  //         debugger
-  //       })
-  //   },
-  //   [search]
-  // )
-
   const onChangeSearch = (evt) => {
     setSearch(evt.target.value)
   }
@@ -34,7 +11,7 @@ export default function SearchBar(props) {
   const onChangeDrop = (evt) => {
     setDropDown(evt.target.value)
   }
-
+  if (!classes) {return null}
   return (
     <div>
       <input
@@ -58,10 +35,10 @@ export default function SearchBar(props) {
       {classes
       // eslint-disable-next-line
         .filter((cla) => {
-          if (search === '') {
+          if (!search) {
             return null
           } else if (
-            cla[`${dropDown}`].toString().toLowerCase().includes(search.toString().toLowerCase())
+            cla[dropDown].toString().toLowerCase().includes(search.toString().toLowerCase())
           ) {
             return cla
           }
