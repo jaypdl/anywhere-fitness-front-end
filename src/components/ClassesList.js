@@ -6,7 +6,7 @@ import SearchBar from './SearchBar'
 
 const ClassesList = (props) => {
   const { getClasses } = props
-  const [useSearch, setUseSearch] = useState(false)
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     getClasses()
@@ -23,8 +23,8 @@ const ClassesList = (props) => {
   return (
     <div>
       <h1 className='class-list-head'>Available Classes</h1>
-      <SearchBar classes={props.classes} setUseSearch={setUseSearch} />
-      { !useSearch && 
+      <SearchBar classes={props.classes} setSearch={setSearch} search={search} />
+      { !search && 
         (<div className="classes-list">
           {props.classes.map((item) => {
             return <ClassSimple item={item} key={item.class_id} />
