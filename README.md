@@ -12,6 +12,26 @@ When an instructor creates a class they can specify:
  - The date, time of when it will be held
  - The location of where the class will take place
 
+## My Contributions
+
+The frontend functionality of this web app was built out in 4 days by a team of 3 frontend developers.
+- [Myself, Jay Ponce de Leon](https://github.com/jaypdl)
+- [Jennifer Kramer](https://github.com/jenkrame21)
+- and [Carlos Santiago](https://github.com/elCarlosSantiago) 
+
+Due to this being a small team in a time crunch (this was a turned in project) I worked on most components, as have my other 2 team members.
+
+Some highlights of my contributions include:
+- The Redux, along with the asynchronous API calls using Redux Thunk, were handled by both myself and Jennifer. 
+We did the majority together while pair-programming over Zoom.
+These API calls can be found starting at this line: [Redux Actions](https://github.com/jaypdl/anywhere-fitness-front-end/blob/main/src/actions/index.js#L53)
+
+- The 'axiosWithAuth' component, which is a helper utility that grabs and sends in a user's JWT token from local storage, in order to authenticate with the backend.
+
+- The 'PrivateRoute' component, which acts as guard so that only users issued a token can view the certain portions of the site.
+
+- The 'navBar' component which uses conditional logic to determine which navigation options to show a user, depending on if they are logged in.
+
 ## Try out the deployment
 
 The [original group project](https://github.com/Build-Week-Anywhere-Fitness-TT39/front-end) is deployed here: [https://anywhere-fitness-tt39-tt39.vercel.app/](https://anywhere-fitness-tt39-tt39.vercel.app/)
