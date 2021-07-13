@@ -39,7 +39,7 @@ These API calls can be found starting at this line: [Redux Actions](https://gith
 
 - Work on debugging code, and fixing general issues, including a solution to retain state through a page refresh.
 
-## Try out the deployment
+<!-- ## Try out the deployment
 
 The [original group project](https://github.com/Build-Week-Anywhere-Fitness-TT39/front-end) is deployed here: [https://anywhere-fitness-tt39-tt39.vercel.app/](https://anywhere-fitness-tt39-tt39.vercel.app/)
 
@@ -55,7 +55,7 @@ Password: TestIns123
 Username: TestUser
 Password: TestUser123
 ```
-
+ -->
 ## How to run locally:
 1. Clone project, "cd" into the main folder.
 1. Install dependencies with "npm i".
